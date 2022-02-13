@@ -17,3 +17,7 @@ Expected Output: [0, "Beep!", "Boop!", 3, 4, 5]
 Test: "It should substitute the number 3 with the phrase "Won't you be my neighbor?"
 Code: changeValue(array)
 Expected Output: [0, "Beep!", "Boop!", "Won't you be my neighbor?", 4, 5]
+
+Test: "It should substitute all numbers between 10 to 19 with the phrase "Beep?"
+Code: changeValue(array)
+Expected Output: [0, 'Beep!', 'Boop!', "Won't you be my neighbor?", 4, 5, 6, 7, 8, 9, 'Beep!', 'Beep!', 'Beep!', 'Beep!', 'Beep!', 'Beep!', 'Beep!', 'Beep!', 'Beep!', 'Beep!', 'Beep!']

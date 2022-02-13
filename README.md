@@ -13,3 +13,7 @@ Expected Output: [0, "Beep!", 2, 3, 4, 5]
 Test: "It should substitute the number 2 with the phrase "Boop!"
 Code: changeValue(array)
 Expected Output: [0, "Beep!", "Boop!", 3, 4, 5]
+
+Test: "It should substitute the number 3 with the phrase "Won't you be my neighbor?"
+Code: changeValue(array)
+Expected Output: [0, "Beep!", "Boop!", "Won't you be my neighbor?", 4, 5]

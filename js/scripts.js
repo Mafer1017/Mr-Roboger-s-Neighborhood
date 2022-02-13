@@ -21,7 +21,10 @@ function changeValue(array) {
     continue;
     } else if (v === 2) {
         array[i] = "Boop!";
-        return array;
+        continue;
+    } else if (v === 3) {
+        array[i] = "Won't you be my neighbor?";
+        return array
     }
   }
 }

@@ -27,7 +27,8 @@
 #### Describe: changeValue()
 
 - Test: "It should substitute the number 1 with the phrase "Beep!"
-- Code: changeValue(array)
+- Code: changeValue(myArray)
+- Const myArray = beepBoop(5)
 - Expected Output: [0, "Beep!", 2, 3, 4, 5]
 ---
 - Test: "It should substitute the number 2 with the phrase "Boop!"
@@ -35,12 +36,14 @@
 -Expected Output: [0, "Beep!", "Boop!", 3, 4, 5]
 ---
 - Test: "It should substitute the number 3 with the phrase "Won't you be my neighbor?"
-- Code: changeValue(array)
+- Code: changeValue(myArray)
+- Const myArray = beepBoop(5)
 - Expected Output: [0, "Beep!", "Boop!", "Won't you be my neighbor?", 4, 5]
 ---
-- Test: "It should substitute all numbers between 10 to 19 with the phrase "Beep?"
-- Code: changeValue(array)
-- Expected Output: [0, 'Beep!', 'Boop!', "Won't you be my neighbor?", 4, 5, 6, 7, 8, 9, 'Beep!', 'Beep!', 'Beep!', 'Beep!', 'Beep!', 'Beep!', 'Beep!', 'Beep!', 'Beep!', 'Beep!', 'Beep!']
+- Test: "It should prioritize replacing numbers with phrases following a hierarchy of substitutions. The substitution for the number 1 should apply unless there's a 2 or 3 present in the number. Then, the substitution for the number 2 should apply unless there's a 3 present in the number.
+- Code: changeValue(myArray)
+- Const: myArray = beepBoop(20)
+- Expected Output: [0, 'Beep!', 'Boop!', "Won't you be my neighbor?", 4, 5, 6, 7, 8, 9, 'Beep!', 'Beep!', 'Boop!', "Won't you be my neighbor?", 'Beep!', 'Beep!', 'Beep!', 'Beep!', 'Beep!', 'Beep!', 'Boop!']
 ---
 
 ## License

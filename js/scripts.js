@@ -1,31 +1,34 @@
 // business Logic
-let sequence = "";
 function beepBoop(num) {
+  let newArray = [];
   for(let i = 0; i <= num; i++) {
-    sequence += i;
-
-    if (i < (num)) {
-      sequence += ', ';
-    }
+    newArray.push(i);
   }
-  return sequence;
+  return newArray;
 }
-let array = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20,];
+
 function changeValue(array) {
   for (let [i, v] of array.entries()) {
-    if (v === 1) {
-    array[i] = "Beep!";
-    continue;
-    } else if (v === 2) {
-        array[i] = "Boop!";
-        continue;
-    } else if (v === 3) {
-        array[i] = "Won't you be my neighbor?";
-        continue;
-    } else if (v >= 10) {
+    const newString = v.toString();
+    if (newString.includes(3)) {
+      array[i] = "Won't you be my neighbor?";
+    } else if (newString.includes(2)) {
+      array[i] = "Boop!";
+    } else if (newString.includes(1)) {
       array[i] = "Beep!";
-      continue;
     }
   }
   return array;
 }
+
+// UI Logic
+
+$(document).ready(function() {
+  $("form#new-array").submit(function(event) {
+    event.preventDefault();
+    const inputtedValue = $("input#new-range").val();
+    const arrayFromInput =  beepBoop(inputtedValue);
+    const outputArray = changeValue(arrayFromInput);
+    $("#show-result").text(outputArray);
+  });
+})
